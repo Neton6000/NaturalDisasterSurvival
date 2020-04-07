@@ -16,52 +16,66 @@
         header {
             background: #ff4444;
             padding: 20px;
+            display: flex;
+            flex-direction: row;
         }
-        .title,.subtitle {
+        .title,.desc,.text {
             margin: 0;
-            color: #000;
+        }
+        .image {
+            height: 55px;
+            margin-left: 10px;
         }
         main {
             display: flex;
         }
-        .what {
+        .what,.help {
             flex-grow: 1;
+            min-width: 480px;
             margin: 20px;
-            background: #eee;
+            background: #f5f5f5;
             padding: 10px;
+            flex-basis: 0;
         }
-        .w-title {
-            margin: 0;
-        }
-        .w-desc {
-            margin: 0;
-        }
-        .w-content {
+        .what {min-width: 240px; margin-right: 10px;}
+        .help {flex-grow: 2; margin-left: 10px;}
+        .content {
             margin-top: 20px;
-        }
-        .w-result {
-            list-style: none;
-            padding-left: 15px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="title">Natural Disaster Survival</h1>
-        <p class="subtitle">Sök och se statistik på spelet</p>
+        <div class="title">
+            <h1 class="title">Natural Disaster Survival</h1>
+            <p class="title">Sök och se statistik på spelet</p>
+        </div>
     </header>
     <main>
         <div class="what">
-            <h3 class="w-title">Vad kommer hända?</h3>
-            <p class="w-desc">Låt din dator räkna ut vad som kommer att hända.</p>
-            <div class="w-content">
+            <h3 class="title">Vad kommer hända?</h3>
+            <p class="desc">Låt din dator räkna ut vad som kommer att hända.</p>
+            <div class="content">
                 <div class="w-option">Molnigt: <input type="checkbox" id="cloud"></div>
                 <div class="w-option">Suddigt: <input type="checkbox" id="blurry"></div>
                 <div class="w-option">Blåsigt: <input type="checkbox" id="wind"></div>
                 <button class="w-done" onclick="whatEnter()">Kalkylera</button>
-                <ul class="w-result" id="result"></ul>
+                <ul id="result"></ul>
             </div>
         </div>
+        <div class="help">
+                <h3 class="title">Knep och knåp</h3>
+                <p class="desc">Olika tips, trix och påminnelser så du kan bli bättre!</p>
+                <div class="content">
+                    <ul>
+                        <li>Du ska aldrig gå till en hög plats innan du vet vad det kommer bli, annars blir det svårt för dig om det börjar t.ex. brinna eller bli jordbävning.</li>
+                        <li>Sätt dig <b>Inte</b> i bilar framför allt dom i Raving Raceway för bilarna kan börja glitha så du slängs iväg ut i rymden.</li>
+                        <li>Om det kommer en tsunami så behöver du ändå inte klättra så högt. Sätt dig nästan precis så att du inte nuddar vattnet.</li>
+                        <li>På Coastal Quickstop kan du gå till fyren eller en dock om en tornado kommer, det är pågrund av att sakerna är utanför ön så då kan inte tornadon nå dom.</li>
+                        <li>Rymdraketen på Launch Land ska du <b>Aldrig</b> gå in i, för att då riskerar du att dö om någon klickar på uppsjutar knappen.</li>
+                    </ul>
+                </div>
+            </div>
     </main>
 </body>
 </html>
