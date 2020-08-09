@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="">
+    <title>Natural Disaster Survival</title>
+    <script src="stats.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background: #222;
+            margin: 0;
+            font-family: arial;
+        }
+        header {
+            background: #ff4444;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        .title,.desc {
+            margin: 0;
+        }
+        .image {
+            height: 55px;
+            margin-left: 10px;
+        }
+        main {
+            display: flex;
+        }
+        .what,.help {
+            flex-grow: 1;
+            min-width: 480px;
+            margin: 20px;
+            background: #f5f5f5;
+            padding: 10px;
+            flex-basis: 0;
+        }
+        .what {min-width: 240px; margin-right: 10px;}
+        .help {flex-grow: 2; margin-left: 10px;}
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body onload="setLang('eng')">
+    <header>
+        <div class="title">
+            <h1 class="title">Natural Disaster Survival</h1>
+            <p class="title">Sök och se statistik på spelet</p>
+        </div>
+    </header>
+    <main>
+        <div class="what">
+            <h3 class="title">What will happen?</h3>
+            <p class="desc">Let your computer figure out what's going to happen.</p>
+            <div class="content">
+                <div class="w-option">Cloudy: <input type="checkbox" id="cloud"></div>
+                <div class="w-option">Blurry: <input type="checkbox" id="blurry"></div>
+                <div class="w-option">Windy: <input type="checkbox" id="wind"></div>
+                <button class="w-done" onclick="whatEnter()">Calculate</button>
+                <ul id="result"></ul>
+            </div>
+        </div>
+        <div class="help">
+                <h3 class="title">Tricks and puzzles</h3>
+                <p class="desc">Various tips, tricks and reminders so you can get better!</p>
+                <div class="content">
+                    <ul>
+                        <li>You should never go to a high place before you know what it will be, otherwise it will be difficult for you if it starts e.g. burn or become an earthquake.</li>
+                        <li>Do not sit in <b>Cars</b>, especially those in Raving Raceway, because the cars can start to glide so you are thrown into space.</li>
+                        <li>If there is a tsunami, you still do not have to climb so high. Sit almost exactly so that you do not touch the water.</li>
+                        <li>At Coastal Quickstop you can go to the lighthouse or a dock if a tornado comes, it's because things are off the island so then tornadoes can not reach them.</li>
+                        <li>You should <b>Never</b> go into the space rocket on Launch Land, because then you risk dying if someone clicks on the launch button.</li>
+                    </ul>
+                </div>
+            </div>
+    </main>
+</body>
+</html>
